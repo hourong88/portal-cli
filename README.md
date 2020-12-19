@@ -20,6 +20,37 @@ portal-cli  i <projectName>
 portal-cli -v
 ```
 
+# 拿来即用
+下载以上git代码以后
+先修改url git仓库，这个是你放下载前端框架的仓库地址，换成你自己的
+然后，按照下面文档，将此脚手架工具发布npm包
+修改npmUrl地址
+就可以按照以上命令进行用啦
+
+```
+/*
+  @dest: 使用配置文件
+  @Author: tree
+ */
+module.exports  = {
+  npmUrl: 'https://registry.npmjs.org/xxx-cli',
+  promptTypeList:[{
+      type: 'list',
+      message: '请选择拉取的模版类型:',
+      name: 'type',
+      choices: [{
+        name: '前端框架',
+        value: {
+          url: 'http://192.168.3.51/xxx-frame.git',
+          gitName: 'portal-frame',
+          val:'前端框架'
+        }
+      }]
+  }],
+};
+
+```
+
 # 脚手架说明文档：前端脚手架CLI生成模版命令工具（包括，npm包的发布，脚手架的搭建，注意事项，优化等）
 NodeJs的出现，让前端工程化的理念不断深入，正在向正规军靠近。先是带来了Gulp、Webpack等强大的构建工具，随后又出现了vue-cli和create-react-app等完善的脚手架，提供了完整的项目架构，让我们可以更多的关注业务，而不必在项目基础设施上花费大量时间。
 
@@ -299,7 +330,6 @@ portal-cli init <projectName\>  //portal-cli init test ，test就是你放文件
 
 ![](quiver-image-url/62183D4860FEF933061C55CFD3B1F089.png)
 
-以上代码公司git仓库上有portal-frame，npm包地址<https://www.npmjs.com/package/portal-cli>
 
 ## 结语
 
