@@ -1,0 +1,21 @@
+{
+  "name": "portal-cli",
+  "version": "0.2.0",
+  "main": "index.js",
+  "author": "hourong",
+  "private": false,
+  "bin": {
+    "portal-cli": "./bin/index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^5.0.0",
+    "fs-extra": "^9.0.0",
+    "inquirer": "^7.1.0"
+  },
+  "devDependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
